@@ -13,7 +13,7 @@ import logger from "redux-logger";
 // logger from redux-logger
 // rootReducer from ./reducers
 
-const middleware = [thunk];
+const middleware = [thunk, logger];
 
 const store = createStore(
   rootReducer,

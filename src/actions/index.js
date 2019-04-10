@@ -14,7 +14,7 @@ export const fetchPeople = () => async dispatch => {
   const res = await axios.get("https://swapi.co/api/people");
   dispatch({
     type: FETCHING,
-    payload: res.data
+    payload: res.data.results
   });
   dispatch({
     type: SUCCESS,
