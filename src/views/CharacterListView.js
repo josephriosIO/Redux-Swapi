@@ -22,8 +22,11 @@ class CharacterListView extends React.Component {
       <h2>fetching...</h2>;
     }
     return (
-      <div className="CharactersList_wrapper">
-        <CharacterList characters={this.props.characters} />
+      <div>
+        {this.props.error && <p className="error">{this.props.error}</p>}
+        <div className="CharactersList_wrapper">
+          <CharacterList characters={this.props.characters} />
+        </div>
       </div>
     );
   }

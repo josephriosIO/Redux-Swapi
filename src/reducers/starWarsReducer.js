@@ -2,7 +2,7 @@ import { FETCHING, SUCCESS, FAILURE } from "../actions";
 const initialState = {
   characters: [],
   fetching: false,
-  error: null
+  error: ""
   // Array characters, Boolean fetching, null error.
 };
 export const charsReducer = (state = initialState, action) => {
@@ -16,7 +16,7 @@ export const charsReducer = (state = initialState, action) => {
       return {
         ...state,
         fetching: false,
-        error: action.payload
+        error: "BOOM BOOM NO GOOD"
       };
     case SUCCESS:
       return {
